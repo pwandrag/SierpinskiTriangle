@@ -36,7 +36,7 @@ namespace Fractal
         private void SetupTriangle(Pen p)
         {
             T = new Triangle(
-             new Point(100, 300),
+             new Point(0, 300),
              new Point(-300, -300),
              new Point(300, -300)
              );
