@@ -36,7 +36,7 @@ namespace Fractal
         private void SetupTriangle(Pen p)
         {
             T = new Triangle(
-             new Point(1, 300),
+             new Point(100, 300),
              new Point(-300, -300),
              new Point(300, -300)
              );
@@ -122,6 +122,10 @@ namespace Fractal
             AngleACBC = Angle(B, A, C);
         }
 
+
+        /// <summary>
+        /// Created from ChatGPT Prompt: how do i calculate the angle in degrees between two points that share a 3rd point in 2D using c#
+        /// </summary>
         private double Angle(Point P1, Point P2, Point Shared)
         {
             double angleA = Math.Atan2(P1.Y - Shared.Y, P1.X - Shared.X);
@@ -139,6 +143,7 @@ namespace Fractal
                 angle -= 360;
             }
 
+            //modify to get opposite angle for triangle usage
             return angle > 180 ? 360 - angle : angle;
         }
 
